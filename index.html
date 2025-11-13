@@ -177,6 +177,55 @@
         </div>
     </div>
 
+    <!-- Modal de Guía Completa -->
+    <div id="guide-modal" class="modal">
+        <div class="modal-content guide-content">
+            <button class="modal-close">&times;</button>
+
+            <div class="guide-header">
+                <div class="guide-icon" id="guide-icon">🌟</div>
+                <h2 class="modal-title" id="guide-title">Visualización</h2>
+                <div class="guide-level" id="guide-level">Principiante</div>
+            </div>
+
+            <div class="guide-description" id="guide-description">
+                <!-- Descripción de la visualización -->
+            </div>
+
+            <div class="guide-benefits">
+                <h3>✨ Beneficios</h3>
+                <ul id="guide-benefits-list">
+                    <!-- Lista de beneficios -->
+                </ul>
+            </div>
+
+            <div class="guide-steps">
+                <h3>📋 Guía Paso a Paso</h3>
+                <div class="steps-progress">
+                    <span class="step-counter"><span id="current-step">1</span> / <span id="total-steps">10</span></span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="step-progress"></div>
+                    </div>
+                </div>
+
+                <div class="step-content" id="step-content">
+                    <!-- Paso actual -->
+                </div>
+
+                <div class="step-navigation">
+                    <button class="step-btn" id="prev-step" disabled>← Anterior</button>
+                    <button class="step-btn primary" id="next-step">Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="guide-actions">
+                <button class="guide-action-btn" id="start-guided-session">
+                    ⏱️ Iniciar Sesión Guiada
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="data.js"></script>
     <script src="app.js"></script>
     <script src="features.js"></script>

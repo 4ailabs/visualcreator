@@ -387,7 +387,8 @@ class ModalManager {
         this.modals = {
             timer: document.getElementById('timer-modal'),
             breathing: document.getElementById('breathing-modal'),
-            history: document.getElementById('history-modal')
+            history: document.getElementById('history-modal'),
+            guide: document.getElementById('guide-modal')
         };
 
         this.initListeners();
@@ -441,6 +442,119 @@ class ModalManager {
         const modal = this.modals[modalName];
         if (modal) {
             modal.classList.remove('active');
+        }
+    }
+}
+
+// ========== GESTOR DE GUÍA PASO A PASO ==========
+
+class GuideManager {
+    constructor() {
+        this.currentExercise = null;
+        this.currentStep = 0;
+        this.totalSteps = 0;
+
+        this.initElements();
+        this.initListeners();
+    }
+
+    initElements() {
+        this.iconEl = document.getElementById('guide-icon');
+        this.titleEl = document.getElementById('guide-title');
+        this.levelEl = document.getElementById('guide-level');
+        this.descriptionEl = document.getElementById('guide-description');
+        this.benefitsListEl = document.getElementById('guide-benefits-list');
+        this.stepContentEl = document.getElementById('step-content');
+        this.currentStepEl = document.getElementById('current-step');
+        this.totalStepsEl = document.getElementById('total-steps');
+        this.progressFillEl = document.getElementById('step-progress');
+        this.prevBtn = document.getElementById('prev-step');
+        this.nextBtn = document.getElementById('next-step');
+        this.startSessionBtn = document.getElementById('start-guided-session');
+    }
+
+    initListeners() {
+        this.prevBtn.addEventListener('click', () => this.previousStep());
+        this.nextBtn.addEventListener('click', () => this.nextStep());
+
+        this.startSessionBtn.addEventListener('click', () => {
+            if (this.currentExercise && window.modalManager) {
+                window.modalManager.close('guide');
+                window.modalManager.open('timer');
+                if (window.timer) {
+                    window.timer.setDuration(this.currentExercise.duration * 60);
+                }
+            }
+        });
+    }
+
+    showGuide(exercise) {
+        this.currentExercise = exercise;
+        this.currentStep = 0;
+        this.totalSteps = exercise.steps ? exercise.steps.length : 0;
+
+        // Actualizar información general
+        this.iconEl.textContent = exercise.icon;
+        this.titleEl.textContent = exercise.name;
+        this.levelEl.textContent = exercise.level || 'Principiante';
+        this.descriptionEl.textContent = exercise.description || exercise.notes;
+
+        // Actualizar beneficios
+        this.benefitsListEl.innerHTML = '';
+        if (exercise.benefits && exercise.benefits.length > 0) {
+            exercise.benefits.forEach(benefit => {
+                const li = document.createElement('li');
+                li.textContent = benefit;
+                this.benefitsListEl.appendChild(li);
+            });
+        }
+
+        // Actualizar pasos
+        if (this.totalSteps > 0) {
+            this.totalStepsEl.textContent = this.totalSteps;
+            this.showStep(0);
+        }
+
+        // Abrir modal
+        if (window.modalManager) {
+            window.modalManager.open('guide');
+        }
+    }
+
+    showStep(stepIndex) {
+        if (!this.currentExercise || !this.currentExercise.steps) return;
+
+        this.currentStep = stepIndex;
+        const step = this.currentExercise.steps[stepIndex];
+
+        // Actualizar contenido del paso
+        this.stepContentEl.textContent = `${stepIndex + 1}. ${step}`;
+        this.currentStepEl.textContent = stepIndex + 1;
+
+        // Actualizar barra de progreso
+        const progress = ((stepIndex + 1) / this.totalSteps) * 100;
+        this.progressFillEl.style.width = `${progress}%`;
+
+        // Actualizar botones
+        this.prevBtn.disabled = stepIndex === 0;
+        this.nextBtn.disabled = stepIndex === this.totalSteps - 1;
+
+        if (stepIndex === this.totalSteps - 1) {
+            this.nextBtn.textContent = 'Finalizado ✓';
+        } else {
+            this.nextBtn.textContent = 'Siguiente →';
+        }
+    }
+
+    nextStep() {
+        if (this.currentStep < this.totalSteps - 1) {
+            this.showStep(this.currentStep + 1);
+        }
+    }
+
+    previousStep() {
+        if (this.currentStep > 0) {
+            this.showStep(this.currentStep - 1);
         }
     }
 }
@@ -524,28 +638,70 @@ function updateHistoryDisplay() {
     });
 }
 
-// ========== AGREGAR BOTÓN DE TEMPORIZADOR A TARJETAS ==========
+// ========== AGREGAR BOTONES A TARJETAS ==========
 
 function addTimerToCards() {
-    // Modificar createExerciseCard para agregar botón
+    // Modificar createExerciseCard para agregar botones
     const originalCreateCard = window.createExerciseCard;
 
     window.createExerciseCard = function(exercise) {
         const card = originalCreateCard.call(this, exercise);
 
-        // Agregar botón de iniciar sesión
-        const startBtn = document.createElement('button');
-        startBtn.className = 'start-session-btn';
-        startBtn.innerHTML = '⏱️ Iniciar Sesión';
-        startBtn.style.cssText = `
-            width: 100%;
-            padding: 10px;
+        // Contenedor de botones
+        const buttonsContainer = document.createElement('div');
+        buttonsContainer.style.cssText = `
+            display: flex;
+            gap: 8px;
             margin-top: 12px;
+        `;
+
+        // Botón de Ver Guía
+        const guideBtn = document.createElement('button');
+        guideBtn.className = 'card-action-btn';
+        guideBtn.innerHTML = '📖 Ver Guía';
+        guideBtn.style.cssText = `
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius-small);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        `;
+
+        guideBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 4px 12px rgba(157, 141, 206, 0.3)';
+        });
+
+        guideBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
+        });
+
+        guideBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (window.guideManager) {
+                window.guideManager.showGuide(exercise);
+            }
+        });
+
+        // Botón de Iniciar Sesión
+        const startBtn = document.createElement('button');
+        startBtn.className = 'card-action-btn';
+        startBtn.innerHTML = '⏱️ Iniciar';
+        startBtn.style.cssText = `
+            flex: 1;
+            padding: 10px;
             border: 1px solid var(--glass-border);
             border-radius: var(--border-radius-small);
             background: var(--glass-bg);
             color: var(--text-light);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 500;
             cursor: pointer;
             transition: all var(--transition-fast);
         `;
@@ -568,7 +724,9 @@ function addTimerToCards() {
             }
         });
 
-        card.appendChild(startBtn);
+        buttonsContainer.appendChild(guideBtn);
+        buttonsContainer.appendChild(startBtn);
+        card.appendChild(buttonsContainer);
         return card;
     };
 }
@@ -584,10 +742,12 @@ document.addEventListener('DOMContentLoaded', function() {
         window.breathingGuide = new BreathingGuide();
         window.themeManager = new ThemeManager();
         window.modalManager = new ModalManager();
+        window.guideManager = new GuideManager();
 
-        // Agregar botones de temporizador a las tarjetas
+        // Agregar botones a las tarjetas
         addTimerToCards();
 
-        console.log('✨ Nuevas funcionalidades cargadas correctamente!');
+        console.log('✨ Todas las funcionalidades cargadas correctamente!');
+        console.log('📖 Ahora las visualizaciones incluyen guías detalladas paso a paso');
     }, 100);
 });

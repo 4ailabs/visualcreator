@@ -1069,6 +1069,198 @@ body.dark-theme .breathing-circle {
     background: linear-gradient(135deg, #5d54a4, #7c9eb2);
 }
 
+/* Modal de Guía Completa */
+.guide-content {
+    max-width: 650px;
+}
+
+.guide-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.guide-icon {
+    font-size: 4rem;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.guide-level {
+    display: inline-block;
+    padding: 6px 16px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.guide-description {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--secondary-color);
+    margin-bottom: 24px;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+.guide-benefits {
+    margin-bottom: 30px;
+}
+
+.guide-benefits h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.guide-benefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guide-benefits li {
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius-small);
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    position: relative;
+    padding-left: 36px;
+}
+
+.guide-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 12px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.guide-steps {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.guide-steps h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.steps-progress {
+    margin-bottom: 24px;
+}
+
+.step-counter {
+    display: block;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.step-counter span {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    border-radius: 10px;
+    transition: width var(--transition-normal);
+    width: 0%;
+}
+
+.step-content {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    min-height: 120px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.step-navigation {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.step-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-small);
+    background: var(--glass-bg);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.step-btn:hover:not(:disabled) {
+    background: var(--glass-bg-hover);
+    transform: translateY(-2px);
+}
+
+.step-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.step-btn.primary {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    border-color: transparent;
+}
+
+.step-btn.primary:hover:not(:disabled) {
+    box-shadow: 0 4px 16px rgba(168, 213, 226, 0.3);
+}
+
+.guide-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.guide-action-btn {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: 0 4px 16px rgba(157, 141, 206, 0.3);
+}
+
+.guide-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(157, 141, 206, 0.4);
+}
+
 /* Responsive para nuevas funcionalidades */
 @media (max-width: 768px) {
     .floating-actions {
@@ -1105,6 +1297,19 @@ body.dark-theme .breathing-circle {
     .practice-calendar {
         gap: 4px;
     }
+
+    .guide-content {
+        max-width: 100%;
+    }
+
+    .guide-icon {
+        font-size: 3rem;
+    }
+
+    .step-content {
+        padding: 20px;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1123,5 +1328,18 @@ body.dark-theme .breathing-circle {
 
     .modal-title {
         font-size: 1.5rem;
+    }
+
+    .guide-steps {
+        padding: 16px;
+    }
+
+    .step-navigation {
+        flex-direction: column;
+    }
+
+    .guide-action-btn {
+        width: 100%;
+        padding: 12px 24px;
     }
 }
