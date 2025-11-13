@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Botones flotantes de acciones -->
+    <div class="floating-actions">
+        <button class="float-btn" id="theme-toggle" title="Cambiar tema">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <button class="float-btn" id="breathing-btn" title="Respiración guiada">
+            <span>🌬️</span>
+        </button>
+        <button class="float-btn" id="history-btn" title="Ver historial">
+            <span>📊</span>
+        </button>
+    </div>
+
     <div class="container">
         <header>
             <h1>🧘‍♀️ Visualizaciones Guiadas Mentales</h1>
@@ -71,7 +84,101 @@
         </aside>
     </div>
 
+    <!-- Modal de Temporizador -->
+    <div id="timer-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="modal-title">⏱️ Temporizador de Sesión</h2>
+            <div class="timer-display">
+                <svg class="timer-circle" viewBox="0 0 200 200">
+                    <circle class="timer-bg" cx="100" cy="100" r="90"></circle>
+                    <circle class="timer-progress" cx="100" cy="100" r="90"></circle>
+                </svg>
+                <div class="timer-text">
+                    <div class="timer-time" id="timer-display">00:00</div>
+                    <div class="timer-label" id="timer-label">Preparado</div>
+                </div>
+            </div>
+            <div class="timer-controls">
+                <button class="timer-btn" id="timer-start">Iniciar</button>
+                <button class="timer-btn" id="timer-pause" disabled>Pausar</button>
+                <button class="timer-btn" id="timer-reset">Reiniciar</button>
+            </div>
+            <div class="timer-presets">
+                <button class="preset-btn" data-minutes="5">5 min</button>
+                <button class="preset-btn" data-minutes="10">10 min</button>
+                <button class="preset-btn" data-minutes="15">15 min</button>
+                <button class="preset-btn" data-minutes="20">20 min</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Respiración Guiada -->
+    <div id="breathing-modal" class="modal">
+        <div class="modal-content breathing-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="modal-title">🌬️ Respiración Guiada</h2>
+            <div class="breathing-container">
+                <div class="breathing-circle" id="breathing-circle">
+                    <div class="breathing-text" id="breathing-text">Inhala</div>
+                </div>
+            </div>
+            <div class="breathing-controls">
+                <button class="breathing-btn" id="breathing-start">Iniciar</button>
+                <button class="breathing-btn" id="breathing-stop" disabled>Detener</button>
+            </div>
+            <div class="breathing-patterns">
+                <button class="pattern-btn active" data-pattern="478">4-7-8 (Relajación)</button>
+                <button class="pattern-btn" data-pattern="box">Box (Enfoque)</button>
+                <button class="pattern-btn" data-pattern="simple">Simple (Básico)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Historial -->
+    <div id="history-modal" class="modal">
+        <div class="modal-content history-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="modal-title">📊 Historial de Prácticas</h2>
+
+            <div class="history-stats">
+                <div class="history-stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-info">
+                        <div class="stat-number" id="streak-days">0</div>
+                        <div class="stat-text">Días consecutivos</div>
+                    </div>
+                </div>
+                <div class="history-stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-info">
+                        <div class="stat-number" id="total-sessions">0</div>
+                        <div class="stat-text">Sesiones totales</div>
+                    </div>
+                </div>
+                <div class="history-stat-card">
+                    <div class="stat-icon">⏰</div>
+                    <div class="stat-info">
+                        <div class="stat-number" id="total-minutes">0</div>
+                        <div class="stat-text">Minutos totales</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-container">
+                <h3>Calendario de Prácticas</h3>
+                <div id="practice-calendar" class="practice-calendar"></div>
+            </div>
+
+            <div class="recent-sessions">
+                <h3>Sesiones Recientes</h3>
+                <div id="sessions-list" class="sessions-list"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="data.js"></script>
     <script src="app.js"></script>
+    <script src="features.js"></script>
 </body>
 </html>
