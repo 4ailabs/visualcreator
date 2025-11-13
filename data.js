@@ -1,370 +1,379 @@
-// Datos de rutinas de ejercicio organizadas por día
+// Datos de rutinas de visualización mental organizadas por día
 const dailyRoutines = {
     lunes: {
-        name: "Lunes - Pecho y Tríceps",
+        name: "Lunes - Energía y Motivación",
         exercises: [
             {
-                name: "Press de Banca",
-                icon: "🏋️",
-                sets: 4,
-                reps: "8-12",
+                name: "Visualización del Sol Interior",
+                icon: "☀️",
+                sets: 1,
+                reps: "3 ciclos",
+                duration: 10,
+                calories: 0,
+                notes: "Imagina un sol brillante en tu pecho que irradia energía dorada a todo tu cuerpo."
+            },
+            {
+                name: "Escalera de Logros",
+                icon: "🏔️",
+                sets: 1,
+                reps: "1 sesión",
                 duration: 15,
-                calories: 80,
-                notes: "Mantén la espalda pegada al banco. Controla el descenso."
+                calories: 0,
+                notes: "Visualízate subiendo una escalera donde cada peldaño representa un logro que vas a conseguir."
             },
             {
-                name: "Press Inclinado con Mancuernas",
-                icon: "💪",
-                sets: 3,
-                reps: "10-12",
+                name: "Río de Creatividad",
+                icon: "🌊",
+                sets: 1,
+                reps: "2 ciclos",
                 duration: 12,
-                calories: 65,
-                notes: "Inclinación de 30-45 grados. Movimiento controlado."
+                calories: 0,
+                notes: "Observa un río de luz que fluye desde el universo hacia tu mente, trayendo ideas creativas."
             },
             {
-                name: "Aperturas con Mancuernas",
-                icon: "🤸",
+                name: "Afirmaciones en el Espejo Mental",
+                icon: "💎",
                 sets: 3,
-                reps: "12-15",
-                duration: 10,
-                calories: 55,
-                notes: "Mantén una ligera flexión en los codos."
+                reps: "5 afirmaciones",
+                duration: 8,
+                calories: 0,
+                notes: "Mírate en un espejo mental y repite afirmaciones positivas con convicción."
             },
             {
-                name: "Fondos en Paralelas",
-                icon: "🏃",
-                sets: 3,
-                reps: "8-12",
-                duration: 10,
-                calories: 70,
-                notes: "Inclínate hacia adelante para trabajar más pecho."
-            },
-            {
-                name: "Extensiones de Tríceps",
-                icon: "💪",
-                sets: 3,
-                reps: "10-12",
-                duration: 10,
-                calories: 45,
-                notes: "Mantén los codos fijos y estables."
+                name: "Jardín de Posibilidades",
+                icon: "🌺",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 20,
+                calories: 0,
+                notes: "Camina por un jardín donde cada flor representa una oportunidad que se abre para ti."
             }
         ]
     },
     martes: {
-        name: "Martes - Espalda y Bíceps",
+        name: "Martes - Sanación y Equilibrio",
         exercises: [
             {
-                name: "Dominadas",
-                icon: "🏋️",
-                sets: 4,
-                reps: "6-10",
-                duration: 12,
-                calories: 85,
-                notes: "Agarre pronado. Pecho hacia la barra."
-            },
-            {
-                name: "Remo con Barra",
-                icon: "💪",
-                sets: 4,
-                reps: "8-10",
+                name: "Luz Sanadora Violeta",
+                icon: "💜",
+                sets: 1,
+                reps: "4 ciclos",
                 duration: 15,
-                calories: 75,
-                notes: "Mantén la espalda recta. Tira hacia el abdomen."
+                calories: 0,
+                notes: "Visualiza una luz violeta que recorre tu cuerpo sanando cada célula."
             },
             {
-                name: "Jalón al Pecho",
-                icon: "🤸",
-                sets: 3,
-                reps: "10-12",
+                name: "Baño en Cascada Cristalina",
+                icon: "💧",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 18,
+                calories: 0,
+                notes: "Imagínate bajo una cascada de agua cristalina que limpia toda tensión y dolor."
+            },
+            {
+                name: "Equilibrio de Chakras",
+                icon: "🌈",
+                sets: 1,
+                reps: "7 chakras",
+                duration: 20,
+                calories: 0,
+                notes: "Visualiza cada chakra girando en balance perfecto con sus colores correspondientes."
+            },
+            {
+                name: "Abrazo del Ángel Guardián",
+                icon: "😇",
+                sets: 1,
+                reps: "3 ciclos",
                 duration: 12,
-                calories: 60,
-                notes: "Contrae los dorsales en cada repetición."
+                calories: 0,
+                notes: "Siente la presencia protectora de tu ángel guardián rodeándote con amor."
             },
             {
-                name: "Remo con Mancuerna",
-                icon: "🏃",
-                sets: 3,
-                reps: "10-12",
+                name: "Respiración del Océano",
+                icon: "🌊",
+                sets: 1,
+                reps: "10 respiraciones",
                 duration: 10,
-                calories: 55,
-                notes: "Una mano a la vez. Estabiliza el core."
+                calories: 0,
+                notes: "Sincroniza tu respiración con las olas del océano, inhalando paz y exhalando estrés."
             },
             {
-                name: "Curl de Bíceps con Barra",
-                icon: "💪",
-                sets: 3,
-                reps: "10-12",
-                duration: 10,
-                calories: 40,
-                notes: "Codos pegados al cuerpo. Sin balanceo."
-            },
-            {
-                name: "Curl Martillo",
-                icon: "🏋️",
-                sets: 3,
-                reps: "12-15",
-                duration: 8,
-                calories: 35,
-                notes: "Agarre neutro. Movimiento controlado."
+                name: "Sanación del Niño Interior",
+                icon: "🧸",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 15,
+                calories: 0,
+                notes: "Encuentra a tu niño interior y bríndale amor, comprensión y sanación."
             }
         ]
     },
     miercoles: {
-        name: "Miércoles - Piernas",
+        name: "Miércoles - Abundancia y Prosperidad",
         exercises: [
             {
-                name: "Sentadilla con Barra",
-                icon: "🏋️",
-                sets: 4,
-                reps: "8-12",
-                duration: 20,
-                calories: 120,
-                notes: "Profundidad hasta paralelo. Espalda recta."
-            },
-            {
-                name: "Prensa de Piernas",
-                icon: "💪",
-                sets: 4,
-                reps: "10-12",
-                duration: 15,
-                calories: 100,
-                notes: "Rodillas alineadas con los pies."
-            },
-            {
-                name: "Peso Muerto Rumano",
-                icon: "🤸",
-                sets: 3,
-                reps: "10-12",
+                name: "Lluvia de Oro",
+                icon: "✨",
+                sets: 1,
+                reps: "5 ciclos",
                 duration: 12,
-                calories: 90,
-                notes: "Mantén la barra cerca del cuerpo."
+                calories: 0,
+                notes: "Visualiza una lluvia de monedas doradas cayendo sobre ti, representando abundancia infinita."
             },
             {
-                name: "Extensiones de Cuádriceps",
-                icon: "🏃",
-                sets: 3,
-                reps: "12-15",
-                duration: 10,
-                calories: 60,
-                notes: "Contracción máxima en la parte superior."
+                name: "El Jardín de la Abundancia",
+                icon: "🌳",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 20,
+                calories: 0,
+                notes: "Camina por un jardín donde cada planta representa diferentes formas de abundancia en tu vida."
             },
             {
-                name: "Curl Femoral",
-                icon: "💪",
-                sets: 3,
-                reps: "12-15",
-                duration: 10,
-                calories: 55,
-                notes: "Movimiento lento y controlado."
+                name: "Imán de Prosperidad",
+                icon: "🧲",
+                sets: 1,
+                reps: "3 ciclos",
+                duration: 15,
+                calories: 0,
+                notes: "Activa un imán en tu corazón que atrae oportunidades y prosperidad."
             },
             {
-                name: "Elevaciones de Gemelos",
-                icon: "🏋️",
-                sets: 4,
-                reps: "15-20",
+                name: "Cofre del Tesoro Interior",
+                icon: "💰",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 18,
+                calories: 0,
+                notes: "Descubre un cofre dentro de ti lleno de tesoros: talentos, habilidades y riquezas."
+            },
+            {
+                name: "Río de Abundancia",
+                icon: "🌊",
+                sets: 1,
+                reps: "2 ciclos",
                 duration: 10,
-                calories: 45,
-                notes: "Rango completo de movimiento."
+                calories: 0,
+                notes: "Sumérgete en un río de abundancia que fluye constantemente hacia ti."
+            },
+            {
+                name: "Semillas de Prosperidad",
+                icon: "🌱",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 14,
+                calories: 0,
+                notes: "Planta semillas mentales de tus metas financieras y obsérvalas crecer."
             }
         ]
     },
     jueves: {
-        name: "Jueves - Hombros y Abdomen",
+        name: "Jueves - Amor y Relaciones",
         exercises: [
             {
-                name: "Press Militar",
-                icon: "🏋️",
-                sets: 4,
-                reps: "8-10",
-                duration: 15,
-                calories: 70,
-                notes: "Barra por delante. Core apretado."
-            },
-            {
-                name: "Elevaciones Laterales",
-                icon: "💪",
-                sets: 4,
-                reps: "12-15",
+                name: "Corazón Radiante",
+                icon: "❤️",
+                sets: 1,
+                reps: "4 ciclos",
                 duration: 12,
-                calories: 50,
-                notes: "Codos ligeramente flexionados."
+                calories: 0,
+                notes: "Visualiza tu corazón como un sol rosado que irradia amor incondicional."
             },
             {
-                name: "Elevaciones Frontales",
-                icon: "🤸",
-                sets: 3,
-                reps: "12-15",
+                name: "Puente del Perdón",
+                icon: "🌉",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 18,
+                calories: 0,
+                notes: "Cruza un puente imaginario hacia el perdón de otros y de ti mismo."
+            },
+            {
+                name: "Círculo de Seres Queridos",
+                icon: "👨‍👩‍👧‍👦",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 15,
+                calories: 0,
+                notes: "Reúnete en espíritu con tus seres queridos en un círculo de amor y conexión."
+            },
+            {
+                name: "Jardín del Amor Propio",
+                icon: "🌹",
+                sets: 1,
+                reps: "3 ciclos",
+                duration: 16,
+                calories: 0,
+                notes: "Cultiva flores de amor propio, aceptación y valoración personal."
+            },
+            {
+                name: "Aura de Atracción",
+                icon: "✨",
+                sets: 1,
+                reps: "2 ciclos",
                 duration: 10,
-                calories: 45,
-                notes: "Hasta la altura de los ojos."
+                calories: 0,
+                notes: "Expande tu aura con luz rosada que atrae relaciones armoniosas."
             },
             {
-                name: "Pájaros",
-                icon: "🏃",
-                sets: 3,
-                reps: "12-15",
-                duration: 10,
-                calories: 40,
-                notes: "Trabaja el deltoides posterior."
-            },
-            {
-                name: "Plancha Abdominal",
-                icon: "🧘",
-                sets: 3,
-                reps: "60 seg",
-                duration: 5,
-                calories: 30,
-                notes: "Cuerpo en línea recta."
-            },
-            {
-                name: "Crunch Abdominal",
-                icon: "🤸",
-                sets: 3,
-                reps: "15-20",
-                duration: 8,
-                calories: 25,
-                notes: "Concentración en el abdomen."
+                name: "Abrazo Universal",
+                icon: "🤗",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 12,
+                calories: 0,
+                notes: "Siente el abrazo amoroso del universo que te envuelve y te protege."
             }
         ]
     },
     viernes: {
-        name: "Viernes - Full Body",
+        name: "Viernes - Liberación y Transformación",
         exercises: [
             {
-                name: "Peso Muerto",
-                icon: "🏋️",
-                sets: 4,
-                reps: "6-8",
-                duration: 18,
-                calories: 110,
-                notes: "Movimiento rey. Técnica perfecta."
-            },
-            {
-                name: "Press de Banca Inclinado",
-                icon: "💪",
-                sets: 3,
-                reps: "8-10",
-                duration: 12,
-                calories: 65,
-                notes: "Trabajo del pecho superior."
-            },
-            {
-                name: "Sentadilla Frontal",
-                icon: "🤸",
-                sets: 3,
-                reps: "8-10",
-                duration: 15,
-                calories: 95,
-                notes: "Mantén el torso erguido."
-            },
-            {
-                name: "Remo en Polea",
-                icon: "🏃",
-                sets: 3,
-                reps: "10-12",
-                duration: 12,
-                calories: 60,
-                notes: "Retrae las escápulas."
-            },
-            {
-                name: "Burpees",
+                name: "Fuego Transmutador",
                 icon: "🔥",
-                sets: 3,
-                reps: "10-15",
-                duration: 10,
-                calories: 80,
-                notes: "Ejercicio cardiovascular intenso."
+                sets: 1,
+                reps: "3 ciclos",
+                duration: 15,
+                calories: 0,
+                notes: "Visualiza un fuego violeta que transforma todas tus preocupaciones en luz."
+            },
+            {
+                name: "Mariposa de Transformación",
+                icon: "🦋",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 20,
+                calories: 0,
+                notes: "Experimenta tu metamorfosis: sales del capullo convertido en una mariposa libre."
+            },
+            {
+                name: "Limpieza de Cuerdas Energéticas",
+                icon: "✂️",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 18,
+                calories: 0,
+                notes: "Corta las cuerdas que te atan a situaciones o personas que ya no te sirven."
+            },
+            {
+                name: "Soltar Globos al Cielo",
+                icon: "🎈",
+                sets: 1,
+                reps: "5 globos",
+                duration: 12,
+                calories: 0,
+                notes: "Cada globo representa algo que sueltas: miedos, culpas, resentimientos..."
+            },
+            {
+                name: "Baño de Luz Purificadora",
+                icon: "🌟",
+                sets: 1,
+                reps: "2 ciclos",
+                duration: 14,
+                calories: 0,
+                notes: "Sumérgete en un océano de luz blanca que purifica todo tu ser."
             }
         ]
     },
     sabado: {
-        name: "Sábado - Cardio y Core",
+        name: "Sábado - Conexión Espiritual",
         exercises: [
             {
-                name: "Carrera Continua",
-                icon: "🏃",
+                name: "Elevación al Templo Interior",
+                icon: "🏛️",
                 sets: 1,
-                reps: "30 min",
-                duration: 30,
-                calories: 300,
-                notes: "Ritmo moderado. 70% FCM."
+                reps: "1 sesión",
+                duration: 25,
+                calories: 0,
+                notes: "Asciende a tu templo interior, un lugar sagrado de paz y sabiduría infinita."
             },
             {
-                name: "Mountain Climbers",
-                icon: "⛰️",
-                sets: 4,
-                reps: "30 seg",
-                duration: 8,
-                calories: 60,
-                notes: "Ritmo rápido. Core activado."
+                name: "Encuentro con el Yo Superior",
+                icon: "👁️",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 20,
+                calories: 0,
+                notes: "Dialoga con tu yo superior y recibe su guía y sabiduría."
             },
             {
-                name: "Russian Twists",
-                icon: "🔄",
-                sets: 3,
-                reps: "20-30",
-                duration: 8,
-                calories: 40,
-                notes: "Rota el torso completamente."
+                name: "Conexión con la Tierra",
+                icon: "🌍",
+                sets: 1,
+                reps: "3 ciclos",
+                duration: 15,
+                calories: 0,
+                notes: "Enraízate profundamente en la tierra y siente su energía nutritiva."
             },
             {
-                name: "Plancha Lateral",
-                icon: "🧘",
-                sets: 3,
-                reps: "30 seg",
-                duration: 6,
-                calories: 25,
-                notes: "Cada lado. Mantén alineación."
+                name: "Portal de Luz Cósmica",
+                icon: "🌌",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 18,
+                calories: 0,
+                notes: "Atraviesa un portal hacia dimensiones superiores de consciencia."
             },
             {
-                name: "Bicicleta Abdominal",
-                icon: "🚴",
-                sets: 3,
-                reps: "20-30",
-                duration: 8,
-                calories: 35,
-                notes: "Codo a rodilla opuesta."
+                name: "Meditación de la Estrella",
+                icon: "⭐",
+                sets: 1,
+                reps: "2 ciclos",
+                duration: 16,
+                calories: 0,
+                notes: "Conviértete en una estrella brillante en el cosmos, irradiando tu luz única."
             }
         ]
     },
     domingo: {
-        name: "Domingo - Descanso Activo",
+        name: "Domingo - Paz y Relajación Profunda",
         exercises: [
             {
-                name: "Caminata",
-                icon: "🚶",
+                name: "Playa de la Tranquilidad",
+                icon: "🏖️",
                 sets: 1,
-                reps: "45 min",
-                duration: 45,
-                calories: 200,
-                notes: "Ritmo ligero. Recuperación activa."
+                reps: "1 sesión",
+                duration: 30,
+                calories: 0,
+                notes: "Recuéstate en una playa paradisíaca sintiendo el sol, la brisa y las olas."
             },
             {
-                name: "Estiramientos Dinámicos",
-                icon: "🧘",
+                name: "Flotación en Nubes",
+                icon: "☁️",
                 sets: 1,
-                reps: "15 min",
-                duration: 15,
-                calories: 30,
-                notes: "Todo el cuerpo. Movilidad articular."
-            },
-            {
-                name: "Yoga Suave",
-                icon: "🧘‍♀️",
-                sets: 1,
-                reps: "20 min",
+                reps: "2 ciclos",
                 duration: 20,
-                calories: 50,
-                notes: "Enfócate en la respiración."
+                calories: 0,
+                notes: "Flota entre nubes suaves, sintiéndote liviano y completamente relajado."
             },
             {
-                name: "Foam Rolling",
-                icon: "🎯",
+                name: "Jardín Zen Mental",
+                icon: "🎋",
                 sets: 1,
-                reps: "15 min",
-                duration: 15,
-                calories: 20,
-                notes: "Liberación miofascial. Todos los grupos musculares."
+                reps: "1 sesión",
+                duration: 18,
+                calories: 0,
+                notes: "Pasea por un jardín zen donde cada elemento te invita a la contemplación serena."
+            },
+            {
+                name: "Respiración de la Paz",
+                icon: "🕊️",
+                sets: 1,
+                reps: "10 respiraciones",
+                duration: 12,
+                calories: 0,
+                notes: "Cada inhalación trae paz, cada exhalación libera cualquier inquietud."
+            },
+            {
+                name: "Cápsula de Sanación",
+                icon: "💫",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 25,
+                calories: 0,
+                notes: "Entra en una cápsula de luz que restaura completamente tu energía vital."
             }
         ]
     }
@@ -373,268 +382,268 @@ const dailyRoutines = {
 // Datos de rutinas organizadas por etapas/fases
 const stageRoutines = {
     fase1: {
-        name: "Fase 1: Adaptación Anatómica",
-        description: "Construcción de base muscular y aprendizaje de técnica",
+        name: "Fase 1: Despertar Consciente",
+        description: "Introducción a la visualización y desarrollo de la imaginación consciente",
         duration: "4 semanas",
         level: "Principiante",
         exercises: [
             {
-                name: "Sentadilla con Peso Corporal",
-                icon: "🏋️",
-                sets: 3,
-                reps: "12-15",
-                duration: 10,
-                calories: 60,
-                notes: "Aprende la técnica correcta sin peso adicional."
-            },
-            {
-                name: "Flexiones de Brazos",
-                icon: "💪",
-                sets: 3,
-                reps: "8-12",
+                name: "Respiración Consciente Básica",
+                icon: "🌬️",
+                sets: 1,
+                reps: "10 respiraciones",
                 duration: 8,
-                calories: 50,
-                notes: "Modifica en rodillas si es necesario."
+                calories: 0,
+                notes: "Aprende a observar tu respiración sin modificarla, solo siendo consciente."
             },
             {
-                name: "Remo Invertido",
-                icon: "🤸",
-                sets: 3,
-                reps: "8-10",
+                name: "Visualización del Color",
+                icon: "🎨",
+                sets: 1,
+                reps: "3 colores",
                 duration: 10,
-                calories: 45,
-                notes: "Usa una barra baja o anillas."
+                calories: 0,
+                notes: "Imagina colores simples: rojo, azul, verde. Observa su intensidad."
             },
             {
-                name: "Plancha",
+                name: "Escáner Corporal",
                 icon: "🧘",
-                sets: 3,
-                reps: "30-45 seg",
-                duration: 6,
-                calories: 30,
-                notes: "Construye fuerza core fundamental."
+                sets: 1,
+                reps: "1 sesión",
+                duration: 15,
+                calories: 0,
+                notes: "Recorre mentalmente cada parte de tu cuerpo, notando sensaciones."
             },
             {
-                name: "Zancadas",
-                icon: "🏃",
-                sets: 3,
-                reps: "10-12",
+                name: "Lugar Seguro",
+                icon: "🏡",
+                sets: 1,
+                reps: "1 sesión",
                 duration: 12,
-                calories: 70,
-                notes: "Alterna las piernas. Sin peso."
+                calories: 0,
+                notes: "Crea un espacio mental seguro al que puedas regresar cuando lo necesites."
             },
             {
-                name: "Superman",
-                icon: "🦸",
+                name: "Observación de Pensamientos",
+                icon: "💭",
+                sets: 1,
+                reps: "5 minutos",
+                duration: 10,
+                calories: 0,
+                notes: "Observa tus pensamientos como nubes que pasan, sin juzgarlos."
+            },
+            {
+                name: "Anclaje al Presente",
+                icon: "⚓",
                 sets: 3,
-                reps: "12-15",
+                reps: "1 minuto",
                 duration: 8,
-                calories: 35,
-                notes: "Fortalece la zona lumbar."
+                calories: 0,
+                notes: "Usa tus sentidos para anclarte en el momento presente."
             }
         ]
     },
     fase2: {
-        name: "Fase 2: Desarrollo de Fuerza",
-        description: "Incremento de cargas y volumen de entrenamiento",
+        name: "Fase 2: Profundización",
+        description: "Desarrollo de visualizaciones más complejas y sostenidas",
         duration: "6 semanas",
         level: "Intermedio",
         exercises: [
             {
-                name: "Sentadilla con Barra",
-                icon: "🏋️",
-                sets: 4,
-                reps: "8-10",
+                name: "Visualización del Bosque Encantado",
+                icon: "🌲",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 20,
+                calories: 0,
+                notes: "Explora un bosque mágico con todos tus sentidos internos activados."
+            },
+            {
+                name: "Viaje al Templo del Corazón",
+                icon: "💖",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 25,
+                calories: 0,
+                notes: "Desciende a las profundidades de tu corazón y descubre su sabiduría."
+            },
+            {
+                name: "Diálogo con la Sabiduría Interior",
+                icon: "🧙",
+                sets: 1,
+                reps: "1 sesión",
                 duration: 18,
-                calories: 110,
-                notes: "Incrementa el peso progresivamente."
+                calories: 0,
+                notes: "Encuentra a tu guía interior y hazle las preguntas que necesitas responder."
             },
             {
-                name: "Press de Banca",
-                icon: "💪",
-                sets: 4,
-                reps: "8-10",
+                name: "Sanación de Memorias",
+                icon: "🕰️",
+                sets: 1,
+                reps: "1 memoria",
+                duration: 22,
+                calories: 0,
+                notes: "Trabaja con una memoria dolorosa, transformándola con luz y comprensión."
+            },
+            {
+                name: "Expansión del Aura",
+                icon: "🌟",
+                sets: 1,
+                reps: "3 ciclos",
                 duration: 15,
-                calories: 80,
-                notes: "Enfócate en la potencia."
+                calories: 0,
+                notes: "Expande conscientemente tu campo energético con intención."
             },
             {
-                name: "Peso Muerto",
-                icon: "🤸",
-                sets: 4,
-                reps: "6-8",
-                duration: 18,
-                calories: 120,
-                notes: "Técnica perfecta es crucial."
-            },
-            {
-                name: "Press Militar",
-                icon: "🏃",
-                sets: 3,
-                reps: "8-10",
-                duration: 12,
-                calories: 65,
-                notes: "Desarrolla fuerza en hombros."
-            },
-            {
-                name: "Dominadas Lastradas",
-                icon: "💪",
-                sets: 4,
-                reps: "6-8",
-                duration: 12,
-                calories: 90,
-                notes: "Añade peso cuando sea posible."
-            },
-            {
-                name: "Remo con Barra",
-                icon: "🏋️",
-                sets: 4,
-                reps: "8-10",
-                duration: 15,
-                calories: 75,
-                notes: "Construye espalda gruesa."
+                name: "Vuelo del Águila",
+                icon: "🦅",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 20,
+                calories: 0,
+                notes: "Experimenta volar como un águila, viendo tu vida desde una perspectiva superior."
             }
         ]
     },
     fase3: {
-        name: "Fase 3: Hipertrofia Muscular",
-        description: "Maximización del crecimiento muscular",
+        name: "Fase 3: Maestría Creativa",
+        description: "Visualizaciones avanzadas para manifestación y transformación profunda",
         duration: "8 semanas",
         level: "Intermedio-Avanzado",
         exercises: [
             {
-                name: "Press Inclinado con Mancuernas",
-                icon: "🏋️",
-                sets: 4,
-                reps: "10-12",
-                duration: 15,
-                calories: 75,
-                notes: "Tiempo bajo tensión. 3-1-3."
+                name: "Arquitectura del Futuro Deseado",
+                icon: "🏗️",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 30,
+                calories: 0,
+                notes: "Construye con detalle tu realidad futura ideal en todos sus aspectos."
             },
             {
-                name: "Sentadilla Hack",
-                icon: "💪",
-                sets: 4,
-                reps: "10-12",
-                duration: 16,
-                calories: 95,
-                notes: "Congestión muscular máxima."
+                name: "Reprogramación de Creencias",
+                icon: "🔄",
+                sets: 1,
+                reps: "3 creencias",
+                duration: 25,
+                calories: 0,
+                notes: "Identifica y transforma creencias limitantes en creencias potenciadoras."
             },
             {
-                name: "Jalón Agarre Cerrado",
-                icon: "🤸",
-                sets: 4,
-                reps: "12-15",
-                duration: 12,
-                calories: 60,
-                notes: "Aprieta la contracción."
+                name: "Viaje a Vidas Pasadas",
+                icon: "🔮",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 35,
+                calories: 0,
+                notes: "Explora memorias más allá de esta vida para comprender patrones profundos."
             },
             {
-                name: "Curl Predicador",
-                icon: "💪",
-                sets: 4,
-                reps: "10-12",
-                duration: 12,
-                calories: 45,
-                notes: "Aislamiento total del bíceps."
+                name: "Encuentro con Arquetipos",
+                icon: "👤",
+                sets: 1,
+                reps: "1 arquetipo",
+                duration: 28,
+                calories: 0,
+                notes: "Conecta con arquetipos universales: el guerrero, el sabio, el sanador..."
             },
             {
-                name: "Extensiones de Tríceps Acostado",
-                icon: "🏃",
-                sets: 4,
-                reps: "10-12",
-                duration: 12,
-                calories: 50,
-                notes: "Rango completo de movimiento."
+                name: "Laboratorio de Manifestación",
+                icon: "⚗️",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 30,
+                calories: 0,
+                notes: "Crea en tu laboratorio interno la realidad que deseas manifestar."
             },
             {
-                name: "Elevaciones Laterales con Cable",
-                icon: "🤸",
-                sets: 4,
-                reps: "12-15",
-                duration: 12,
-                calories: 48,
-                notes: "Tensión constante en deltoides."
+                name: "Fusión con tu Ser Multidimensional",
+                icon: "🌈",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 32,
+                calories: 0,
+                notes: "Integra todos los aspectos de tu ser en todas las dimensiones."
             },
             {
-                name: "Curl Femoral Acostado",
-                icon: "🏋️",
-                sets: 4,
-                reps: "12-15",
-                duration: 12,
-                calories: 60,
-                notes: "Pausa en la contracción."
+                name: "Portal del Tiempo",
+                icon: "⏳",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 27,
+                calories: 0,
+                notes: "Viaja mental y emocionalmente a través del tiempo para sanar y evolucionar."
             }
         ]
     },
     fase4: {
-        name: "Fase 4: Potencia y Rendimiento",
-        description: "Desarrollo de explosividad y máximo rendimiento atlético",
+        name: "Fase 4: Conciencia Expandida",
+        description: "Visualizaciones místicas para estados alterados de consciencia",
         duration: "6 semanas",
         level: "Avanzado",
         exercises: [
             {
-                name: "Cargadas de Potencia",
-                icon: "⚡",
-                sets: 5,
-                reps: "3-5",
-                duration: 20,
-                calories: 130,
-                notes: "Movimiento olímpico explosivo."
+                name: "Disolución en el Todo",
+                icon: "∞",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 40,
+                calories: 0,
+                notes: "Experimenta la disolución de tu identidad separada en la unidad cósmica."
             },
             {
-                name: "Sentadilla con Salto",
-                icon: "🏋️",
-                sets: 4,
-                reps: "5-8",
-                duration: 15,
-                calories: 100,
-                notes: "Máxima potencia en cada rep."
+                name: "Activación del Tercer Ojo",
+                icon: "👁️‍🗨️",
+                sets: 1,
+                reps: "3 ciclos",
+                duration: 30,
+                calories: 0,
+                notes: "Abre y activa tu percepción extrasensorial y visión interior."
             },
             {
-                name: "Press de Banca Explosivo",
-                icon: "💪",
-                sets: 5,
-                reps: "3-5",
-                duration: 15,
-                calories: 85,
-                notes: "Acelera la barra en cada rep."
+                name: "Consejo de Maestros Ascendidos",
+                icon: "🌟",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 35,
+                calories: 0,
+                notes: "Asiste a un consejo de seres iluminados que te ofrecen sabiduría trascendental."
             },
             {
-                name: "Box Jumps",
-                icon: "📦",
-                sets: 4,
-                reps: "6-8",
-                duration: 12,
-                calories: 90,
-                notes: "Aterrizaje suave. Potencia máxima."
+                name: "Viaje a la Fuente Original",
+                icon: "✨",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 45,
+                calories: 0,
+                notes: "Regresa a la fuente de toda creación y recuerda tu verdadera naturaleza."
             },
             {
-                name: "Arrancadas",
-                icon: "⚡",
-                sets: 5,
-                reps: "2-3",
-                duration: 20,
-                calories: 140,
-                notes: "Técnica impecable requerida."
+                name: "Merkaba de Luz",
+                icon: "⭐",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 38,
+                calories: 0,
+                notes: "Activa tu vehículo de luz merkaba para viajar entre dimensiones."
             },
             {
-                name: "Sprints",
-                icon: "🏃‍♂️",
-                sets: 6,
-                reps: "50m",
-                duration: 18,
-                calories: 150,
-                notes: "Descanso completo entre series."
+                name: "Silencio Absoluto",
+                icon: "🤫",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 50,
+                calories: 0,
+                notes: "Alcanza el estado de vacío mental completo donde todo es posible."
             },
             {
-                name: "Medicine Ball Slams",
-                icon: "🏀",
-                sets: 4,
-                reps: "8-10",
-                duration: 10,
-                calories: 75,
-                notes: "Explosión total del core."
+                name: "Integración Cósmica",
+                icon: "🌌",
+                sets: 1,
+                reps: "1 sesión",
+                duration: 42,
+                calories: 0,
+                notes: "Integra todas las experiencias y sabidurías en tu ser cotidiano."
             }
         ]
     }
