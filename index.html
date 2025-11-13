@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizador de Rutinas de Ejercicio</title>
+    <title>Visualizaciones Guiadas Mentales</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>💪 Rutinas de Ejercicio</h1>
-            <p class="subtitle">Visualiza tu plan de entrenamiento diario y por etapas</p>
+            <h1>🧘‍♀️ Visualizaciones Guiadas Mentales</h1>
+            <p class="subtitle">Explora prácticas de meditación y visualización para tu bienestar mental y espiritual</p>
         </header>
 
         <nav class="view-selector">
@@ -31,17 +31,17 @@
             </div>
             <div class="daily-content">
                 <h2 id="current-day-title">Selecciona un día</h2>
-                <div id="exercises-container" class="exercises-grid"></div>
+                <div id="exercises-container" class="visualizations-grid"></div>
             </div>
         </section>
 
         <!-- Vista por Etapas -->
         <section id="stages-view" class="view-container">
             <div class="stages-navigation">
-                <button class="stage-btn" data-stage="fase1">Fase 1: Adaptación</button>
-                <button class="stage-btn" data-stage="fase2">Fase 2: Desarrollo</button>
-                <button class="stage-btn" data-stage="fase3">Fase 3: Intensificación</button>
-                <button class="stage-btn" data-stage="fase4">Fase 4: Rendimiento</button>
+                <button class="stage-btn" data-stage="fase1">Fase 1: Despertar</button>
+                <button class="stage-btn" data-stage="fase2">Fase 2: Profundización</button>
+                <button class="stage-btn" data-stage="fase3">Fase 3: Maestría</button>
+                <button class="stage-btn" data-stage="fase4">Fase 4: Expansión</button>
             </div>
             <div class="stages-content">
                 <h2 id="current-stage-title">Selecciona una fase</h2>
@@ -49,24 +49,24 @@
                     <p id="stage-description"></p>
                     <p id="stage-duration"></p>
                 </div>
-                <div id="stage-exercises-container" class="exercises-grid"></div>
+                <div id="stage-exercises-container" class="visualizations-grid"></div>
             </div>
         </section>
 
         <!-- Panel de Estadísticas -->
         <aside class="stats-panel">
-            <h3>Estadísticas</h3>
+            <h3>Resumen de Práctica</h3>
             <div class="stat-item">
-                <span class="stat-label">Total de ejercicios:</span>
+                <span class="stat-label">Total de visualizaciones:</span>
                 <span class="stat-value" id="total-exercises">0</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Duración estimada:</span>
+                <span class="stat-label">Duración total:</span>
                 <span class="stat-value" id="total-duration">0 min</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Calorías aprox:</span>
-                <span class="stat-value" id="total-calories">0 kcal</span>
+                <span class="stat-label">Nivel de práctica:</span>
+                <span class="stat-value" id="practice-level">Principiante</span>
             </div>
         </aside>
     </div>

@@ -5,21 +5,21 @@
 }
 
 :root {
-    --primary-color: #4a90e2;
-    --secondary-color: #50c878;
-    --accent-color: #ff6b6b;
+    --primary-color: #8b7ec8;
+    --secondary-color: #a8d8ea;
+    --accent-color: #ffcad4;
     --dark-bg: #1a1a2e;
     --card-bg: #16213e;
-    --text-light: #e4e4e4;
-    --text-dark: #0f3460;
-    --border-radius: 12px;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.2);
+    --text-light: #f0f0f0;
+    --text-dark: #2d3561;
+    --border-radius: 16px;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #8b7ec8 50%, #a8d8ea 100%);
     min-height: 100vh;
     padding: 20px;
     color: var(--text-light);
@@ -179,8 +179,9 @@ header h1 {
     font-size: 1rem;
 }
 
-/* Grid de ejercicios */
-.exercises-grid {
+/* Grid de ejercicios y visualizaciones */
+.exercises-grid,
+.visualizations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;

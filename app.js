@@ -131,10 +131,10 @@ function displayStageExercises(stage) {
     updateStats(routine.exercises);
 }
 
-// Crear tarjeta de ejercicio
+// Crear tarjeta de visualización
 function createExerciseCard(exercise) {
     const card = document.createElement('div');
-    card.className = 'exercise-card';
+    card.className = 'exercise-card visualization-card';
     card.style.animation = 'fadeIn 0.4s ease';
 
     card.innerHTML = `
@@ -144,7 +144,7 @@ function createExerciseCard(exercise) {
         </div>
         <div class="exercise-details">
             <div class="exercise-detail">
-                <span class="detail-label">Series:</span>
+                <span class="detail-label">Sesiones:</span>
                 <span class="detail-value">${exercise.sets}</span>
             </div>
             <div class="exercise-detail">
@@ -155,12 +155,8 @@ function createExerciseCard(exercise) {
                 <span class="detail-label">Duración:</span>
                 <span class="detail-value">${exercise.duration} min</span>
             </div>
-            <div class="exercise-detail">
-                <span class="detail-label">Calorías:</span>
-                <span class="detail-value">${exercise.calories} kcal</span>
-            </div>
         </div>
-        ${exercise.notes ? `<div class="exercise-notes">💡 ${exercise.notes}</div>` : ''}
+        ${exercise.notes ? `<div class="exercise-notes">✨ ${exercise.notes}</div>` : ''}
     `;
 
     // Efecto de hover
@@ -179,12 +175,21 @@ function createExerciseCard(exercise) {
 function updateStats(exercises) {
     const totalExercises = exercises.length;
     const totalDuration = exercises.reduce((sum, ex) => sum + ex.duration, 0);
-    const totalCalories = exercises.reduce((sum, ex) => sum + ex.calories, 0);
+
+    // Determinar nivel de práctica según duración total
+    let practiceLevel = 'Principiante';
+    if (totalDuration > 60) {
+        practiceLevel = 'Avanzado';
+    } else if (totalDuration > 30) {
+        practiceLevel = 'Intermedio';
+    }
 
     // Animación de números
     animateValue('total-exercises', 0, totalExercises, 500);
     animateValue('total-duration', 0, totalDuration, 500);
-    animateValue('total-calories', 0, totalCalories, 500);
+
+    // Actualizar nivel de práctica
+    document.getElementById('practice-level').textContent = practiceLevel;
 }
 
 // Animar valores numéricos
@@ -203,8 +208,6 @@ function animateValue(elementId, start, end, duration) {
 
         if (elementId === 'total-duration') {
             element.textContent = Math.round(current) + ' min';
-        } else if (elementId === 'total-calories') {
-            element.textContent = Math.round(current) + ' kcal';
         } else {
             element.textContent = Math.round(current);
         }
@@ -310,7 +313,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-console.log('💪 Visualizador de Rutinas de Ejercicio cargado correctamente!');
+console.log('🧘‍♀️ Visualizaciones Guiadas Mentales cargado correctamente!');
 console.log('Atajos de teclado:');
 console.log('- Tecla 1: Vista Diaria');
 console.log('- Tecla 2: Vista por Etapas');
